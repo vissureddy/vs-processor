@@ -1,0 +1,13 @@
+logging:
+  level:
+    ROOT: INFO
+
+
+# you can get into iam page [https://console.aws.amazon.com/iam/home]
+cloud.aws.credentials.accessKey: AKIAIZ7KJXDEZENWIPIQ
+cloud.aws.credentials.secretKey: kxG8QRSuYzRKGIUqeP2NZh5hDfu2MGjJkYNuhpXf
+
+# example : ap-northeast-1
+cloud.aws.region: us-west-2
+cloud.aws.region.static: us-west-2
+

@@ -1,0 +1,52 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "spring-boot"
+apply plugin: "io.spring.dependency-management"
+
+
+jar {
+    baseName = 'vs-processor'
+    version = '0.0.1-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.5.RELEASE")
+        classpath("io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE")
+    }
+}
+
+dependencyManagement {
+     imports {
+          mavenBom("org.springframework.cloud:spring-cloud-aws:1.1.0.RELEASE")
+     }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+
+    compile("org.springframework.boot:spring-boot-starter-actuator:1.3.5.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter:1.3.5.RELEASE")
+  //  compile("org.springframework.cloud:spring-cloud-starter-aws:1.1.0.RELEASE")
+    // if I don't add the line below, the annotation @MessageMapping is not found :(
+    // I would have expected that cloud-starter-aws would have taken care of it
+  //  compile("org.springframework.cloud:spring-cloud-aws-messaging:1.1.0.RELEASE")
+    // this has been added to fix an exception happening, please read below
+    compile("org.springframework.data:spring-data-commons:1.12.1.RELEASE")
+    
+    // Redis dependencies    
+  	compile("org.springframework.data:spring-data-redis:1.5.0.RELEASE")
+    compile("org.apache.commons:commons-pool2:2.0")
+    compile("redis.clients:jedis:2.5.2")
+    compile ("com.cwbase:logback-redis-appender:1.1.5")
+    
+}

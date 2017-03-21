@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vs-processor.iml" filepath="$PROJECT_DIR$/.idea/modules/vs-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vs-processor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/vs-processor_main.iml" group="vs-processor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vs-processor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/vs-processor_test.iml" group="vs-processor" />
+    </modules>
+  </component>
+</project>
